@@ -40,6 +40,7 @@ public class MyQueue {
         }
         int element = elements[front];
         front = (front + 1) % elements.length;
+        // instead of size++ do size--
         size--;
         return element;
     }
@@ -48,6 +49,7 @@ public class MyQueue {
         if (isEmpty()) {
             throw new IllegalStateException("Queue is empty");
         }
+        // get the front element, not the rear element
         return elements[front];
     }
 }
